@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pong</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ewert&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <h1>Pong</h1>
+
+    <button class="knapp" onclick="startEnspiller()">Singel-player</button>
+    <button class="knapp" onclick="startSpill('flerspiller')">Multi-player</button>
+
+    <div class="lineup">
+        <img src="medier/annonse1.jpg" alt="">
+        <canvas id="brett"></canvas>
+        <img src="medier/annonse2.jpg" alt="">
+    </div>
+
+    <div id="aiVanskelighetsgrad" style="display: none;">
+        <button class="knapp" onclick="settAIVanskelighetsgrad(0.1)">Easy</button>
+        <button class="knapp" onclick="settAIVanskelighetsgrad(0.15)">Medium</button>
+        <button class="knapp" onclick="settAIVanskelighetsgrad(0.2)">Hard</button>
+    </div>
+
+    <audio id="kollisjonsLyd">
+        <source src="medier/sound.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"> </script>
+</body>
+
+</html>

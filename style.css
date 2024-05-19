@@ -1,0 +1,134 @@
+        /* Spillet */
+
+        body {
+            text-align: center;
+            background-color: #37474f;
+            color: white;
+        }
+
+        h1 {
+            font-family: "Ewert", serif;
+            font-size: 60px;
+            color: white;
+            animation: pulsAnimasjon 2s infinite alternate;
+        }
+
+        @keyframes pulsAnimasjon {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.2);
+            }
+        }
+
+        #brett {
+            background-color: #263238;
+            border-top: 5px solid white;
+            border-bottom: 5px solid white;
+            border-radius: 15px;
+            margin: 20px auto;
+            display: block;
+            width: 600px;
+            height: 500px;
+            position: relative;
+        }
+
+        .knapp {
+            background-color: white;
+            color: #263238;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 5px;
+            border-radius: 5px;
+        }
+
+        .knapp:hover {
+            background-color: lightgray;
+        }
+
+        /* Index */
+        
+        .boks {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: row;
+        }
+
+        .historieBoksS {
+            padding: 0 50px;
+        }
+
+        .text {
+            font-size: 25px;
+        }
+
+        .halfscreen img,
+        .boks img {
+            max-height: 50vh;
+            max-width: 40vw;
+            border-radius: 5px;
+            margin: 0;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-image: url("medier/ponghero.jpg");
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            margin-bottom: 100px;
+        }
+
+        .link img {
+            max-height: 45vh;
+            max-width: 40vw;
+        }
+
+        .link h2 {
+            display: flex;
+            justify-content: center;
+            color: white;
+        }
+
+        .link a {
+            text-decoration: none;
+        }
+
+        .link h2:hover {
+            text-decoration: underline;
+        }
+
+        .link {
+            display: flex;
+            justify-content: center;
+            margin-top: 100px;
+        }
+
+        .lineup {
+            display: flex;
+        }
+
+        .lineup img{
+            height: 525px;
+        }
+
+        @media(max-width: 650px) {
+            .boks {
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+        }
+        
